@@ -23,5 +23,14 @@ namespace Full_GRASP_And_SOLID.Library
         public int Time { get; set; }
 
         public Equipment Equipment { get; set; }
+
+        public double GetStepCost()
+        {
+            double InputCost = Input.UnitCost * Quantity;
+            double EquipmentCost = Equipment.HourlyCost * Time;
+            return InputCost + EquipmentCost;
+        }
+
+
     }
 }
