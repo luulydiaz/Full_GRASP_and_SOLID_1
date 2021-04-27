@@ -25,6 +25,17 @@ namespace Full_GRASP_And_SOLID.Library
             this.steps.Remove(step);
         }
 
+        public double GetProductionCost()
+        {
+            double cost = 0;
+            foreach (Step step in this.steps)
+            {
+                cost = cost + step.GetStepCost();
+            }
+            return cost;
+
+        }
+
         public void PrintRecipe()
         {
             Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
