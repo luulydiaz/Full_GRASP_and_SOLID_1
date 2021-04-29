@@ -24,6 +24,9 @@ namespace Full_GRASP_And_SOLID.Library
 
         public Equipment Equipment { get; set; }
 
+/*Se implementa el metodo GetStepCost(). Lo implementamos en la clase Step porque es la clase experta en toda la información que necesitamos(Tiempo y precio de el equipamiento y producto).
+A la vez no viola con el principio de SRP, ya que no habría más de una razón por la cual modificar el codigo.
+*/
         public double GetStepCost()
         {
             double InputCost = Input.UnitCost * Quantity;
