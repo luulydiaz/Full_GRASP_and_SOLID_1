@@ -48,6 +48,7 @@ A la vez no viola con el principio de SRP, ya que no habría más de una razón 
                 Console.WriteLine($"{step.Quantity} de '{step.Input.Description}' " +
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
             }
+            Console.WriteLine("Costo total de producción:" + GetProductionCost());
         }
     }
 }
